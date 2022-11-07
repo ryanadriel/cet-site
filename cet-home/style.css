@@ -1,0 +1,403 @@
+@import url('http://fonts.cdnfonts.com/css/nexa-bold');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  font-family: 'Nexa', sans-serif;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #636363;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #2e2e2e;
+  border-radius: 4px;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 15px 0;
+  margin: auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section .title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: uppercase !important;
+}
+
+section .title::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 150px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+section .title::after {
+  position: absolute;
+  font-weight: 700;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  background: #f3f3f3;
+  color: #15b0de;
+  padding: 5px;
+  transform: translateX(-50%);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.divider {
+  height: 1.1px;
+  background: linear-gradient(270deg, #6effff, #44a9bb);
+}
+
+.divider-1 {
+  height: 1.1px;
+  background: linear-gradient(270deg, #008299, #006577);
+}
+
+/* -- HEADER NAV  -- */
+
+.section header {
+  margin-bottom: 4rem;
+}
+
+#header {
+  display: flex;
+  border-bottom: 1px solid #e4e4e4;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background: #fff;
+}
+
+/* -- NAVBAR -- */
+
+nav {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav .menu ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav .menu {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+nav.container {
+  margin-right: 100px;
+}
+
+nav .menu ul a.title {
+  -webkit-font-smoothing: antialiased;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  position: relative;
+  transition: color 0.1s;
+  color: #00a0db;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+  color: #15b0de;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #15b0de;
+
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav.container .logo img {
+  width: 9rem;
+  margin-left: -250px;
+}
+
+/* -- HOME inicio -- */
+.home {
+  display: flex;
+  background-image: url(assets/img/img1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  min-height: 500px;
+  color: #fff;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content {
+  line-height: 60px;
+}
+
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+.home .home-content .text-2 {
+  font-size: 75px;
+  margin-left: -3px;
+}
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+  font-weight: bolder;
+  color: #00a0db;
+}
+
+.btn {
+  color: #fff !important;
+  font-weight: bolder !important;
+  background-color: #00a0db !important;
+  margin-top: 20px;
+  border: 1px solid #fff !important;
+  width: 15rem;
+  height: 3rem;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn:hover {
+  color: #00a0db !important;
+  font-weight: bolder;
+  border: 1px solid #15b0de !important;
+  background: #fff !important;
+  transition: 0.3s;
+}
+
+/* -- Service -- */
+
+.service {
+  background-color: #f3f3f3;
+}
+.service .title::after {
+  content: 'prestados';
+}
+
+.service .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+i {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  font-size: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #fff;
+  margin: 14px 1.5px;
+}
+
+.icon {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 3rem;
+}
+
+.icones .button {
+  width: 80px;
+  height: 80px;
+  background: #15b0de;
+  border-radius: 50px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.subtitle-services {
+  color: #111;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* -- partners -- */
+
+.partners {
+  background-color: #f3f3f3;
+}
+
+.partners .title::after {
+  content: 'confira';
+}
+
+.partners .title::after {
+  background: #f3f3f3;
+}
+
+#partners .container {
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#partners img {
+  margin-top: 50px;
+  width: 10rem;
+  height: 10rem;
+  margin-right: 0.5rem;
+}
+
+.swiper {
+  width: 98vw;
+  height: 300px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* -- INSTAGRAM -- */
+
+.instagram .title::after {
+  content: 'siga-nos';
+}
+
+#instagram {
+  background-color: #f3f3f3ff;
+}
+
+/* -- localização -- */
+
+.localizacao .title::after {
+  content: 'confira';
+}
+
+#localizacao {
+  background-color: #f3f3f3;
+}
+
+/* -- Footer -- */
+
+footer {
+  height: 25rem;
+  background-color: #15b0de;
+  margin-bottom: 0;
+  display: flex;
+}
+
+footer img {
+  width: 10rem;
+  margin-top: 50px;
+}
+
+footer .brand {
+  height: 10rem;
+}
+
+footer .address p {
+  color: #f3f3f3;
+}
+
+footer .links {
+  margin-top: 3rem;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .links a {
+  color: #f3f3f3;
+  text-decoration: underline !important;
+}
+
+footer .title {
+  color: #fff;
+  font-weight: bolder;
+}
+
+footer .content-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.footer-copyright {
+  background-color: #15b0de;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-copyright p {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.content-footer {
+  display: flex;
+}

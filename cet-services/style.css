@@ -1,0 +1,238 @@
+@import url('http://fonts.cdnfonts.com/css/nexa-bold');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  font-family: 'Nexa', sans-serif;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #636363;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #2e2e2e;
+  border-radius: 4px;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 15px 0;
+  margin: auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section .title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: uppercase !important;
+}
+
+section .title::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 150px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+section .title::after {
+  position: absolute;
+  font-weight: 700;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  background: #f3f3f3;
+  color: #15b0de;
+  padding: 5px;
+  transform: translateX(-50%);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.divider {
+  height: 1.1px;
+  background: linear-gradient(270deg, #6effff, #44a9bb);
+}
+
+.divider-1 {
+  height: 1.1px;
+  background: linear-gradient(270deg, #008299, #006577);
+}
+
+/* -- HEADER NAV  -- */
+
+.section header {
+  margin-bottom: 4rem;
+}
+
+#header {
+  display: flex;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background: #fff;
+}
+
+/* -- NAVBAR -- */
+
+nav {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav .menu ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav .menu {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+nav.container {
+  margin-right: 100px;
+}
+
+nav .menu ul a.title {
+  -webkit-font-smoothing: antialiased;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  position: relative;
+  transition: color 0.1s;
+  color: #00a0db;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+  color: #15b0de;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #15b0de;
+
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav.container .logo img {
+  width: 9rem;
+  margin-left: -250px;
+}
+
+/* -- SERVICE -- */
+
+.services {
+  background-color: #f3f3f3;
+  margin-top: 2.5rem;
+}
+
+.services .title::after {
+  content: 'prestados';
+}
+
+.service-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#services .service-content .card {
+  width: 25rem;
+}
+
+/* -- localização -- */
+
+.localizacao .title::after {
+  content: 'confira';
+}
+
+#localizacao {
+  background-color: #f3f3f3;
+}
+
+/* -- Footer -- */
+
+footer {
+  height: 25rem;
+  background-color: #15b0de;
+  margin-bottom: 0;
+  display: flex;
+}
+
+footer img {
+  width: 10rem;
+  margin-top: 50px;
+}
+
+footer .address {
+  margin-top: 20px;
+}
+
+footer .container {
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+
+.footer-copyright {
+  background-color: #15b0de;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-copyright p {
+  margin-top: 15px;
+}
